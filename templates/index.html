@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}
+	Онлайн-магазин
+{% endblock %}
+
+{% block main %}
+	<h1>Онлайн-магазин</h1>
+	<br/>
+	<div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+		{% for product in products %}
+			<div class="col">
+				<div class="card mb-4 rounded-3 shadow-sm">
+					<div class="card-header py-3">
+						<h4 class="my-0 fw-normal">{{ product.name }}</h4>
+					</div>
+					<div class="card-body">
+						<h1 class="card-title pricing-card-title">{{ product.price }}<small class="text-muted fw-light" style="margin-left: 5px">рублей</small></h1>
+						{% if product.description is not none %}<p>{{ product.description }}</p>{% endif %}
+						<button type="button" class="w-100 btn btn-lg btn-outline-primary">Купить</button>
+					</div>
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+{% endblock %}

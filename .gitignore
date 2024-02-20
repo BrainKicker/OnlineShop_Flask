@@ -1,0 +1,22 @@
+# Virtual environment
+/venv/
+
+# Byte-compiled files
+/__pycache__/
+**/*.pyo
+**/*.pyc
+
+# Output folders
+/build/
+/bin/
+/out/
+
+# Databases
+**/*.db
+**/*.sqlite
+
+# Logs
+**/*.log
+
+# Application private folder
+/instance/
